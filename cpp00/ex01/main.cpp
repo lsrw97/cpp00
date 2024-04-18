@@ -4,8 +4,8 @@
 
 int main()
 {
-	Contact con = Contact();
-	PhoneBook pb = PhoneBook();
+	Contact con;
+	PhoneBook pb;
 	std::string mode;
 
 	while(1)

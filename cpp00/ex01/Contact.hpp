@@ -10,7 +10,6 @@ class Contact {
 		std::string nickname;
 		std::string secret;
 		std::string phone;
-		int number;
 	public:
 		Contact();
 		~Contact();

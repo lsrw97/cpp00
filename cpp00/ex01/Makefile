@@ -5,19 +5,19 @@ NAME	=	phonebook
 
 CXX		=	clang++
 
-CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g #-fsanitize=address
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-clean: 
+clean:
 	rm -f $(OBJS)
 
 fclean:
-	rm -f $(NAME)
+	rm -f $(OBJS) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

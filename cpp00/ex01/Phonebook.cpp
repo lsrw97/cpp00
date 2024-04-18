@@ -1,11 +1,8 @@
 #include <iostream>
 #include "Phonebook.hpp"
 #include <iomanip>
-#include <algorithm>
 #include <cctype>
 #include <string>
-
-
 
 PhoneBook::PhoneBook()
 {
@@ -36,10 +33,10 @@ void    PhoneBook::search()
 {
     for(int i = 0; i < 8; i++)
     {
-        std::cout << std::setw(10) << i + 1 << " | ";
-        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getFname()) << " | ";
-        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getLname()) << " | ";
-        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getNickname()) << " | " << std::endl;
+        std::cout << std::setw(10) << i + 1 << "|";
+        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getFname()) << "|";
+        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getLname()) << "|";
+        std::cout << std::setw(10) << moreThanTen(this->getContacts()[i].getNickname()) << "|" << std::endl;
     }
 }
 
@@ -58,7 +55,7 @@ void    PhoneBook::search(int index)
     if (index < 0 || index > 7)
     {
         std::cout << "Invalid index" << std::endl;
-        return;
+        return ;
     }
     std::cout << "First name: " << this->getContacts()[index].getFname() << std::endl;
     std::cout << "Last name: " << this->getContacts()[index].getLname() << std::endl;
