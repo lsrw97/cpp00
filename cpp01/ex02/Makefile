@@ -1,7 +1,7 @@
-SRCS	=	Phonebook.cpp Contact.cpp main.cpp
+SRCS	=	main.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	phonebook
+NAME	=	brain
 
 CXX		=	c++
 

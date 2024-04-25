@@ -1,11 +1,11 @@
-SRCS	=	Phonebook.cpp Contact.cpp main.cpp
+SRCS	=	main.cpp 
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	phonebook
+NAME	=	file
 
 CXX		=	c++
 
-CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g #-fsanitize=address
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 all: $(NAME)
 
