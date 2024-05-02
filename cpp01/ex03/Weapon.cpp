@@ -16,5 +16,7 @@ void Weapon::setType(std::string type)
 
 const std::string& Weapon::getType()
 {
+    if (this == nullptr)
+        return nullptr;
     return this->type;
 }
