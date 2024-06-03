@@ -1,6 +1,7 @@
 #include "Fixed.hpp"
 #include <iostream>
 #include <iomanip>
+#include <math.h>
 
 Fixed::Fixed(const Fixed &fixed) : _number(fixed.getRawBits()) { std::cout << "Copy constructor called" << std::endl; }
 

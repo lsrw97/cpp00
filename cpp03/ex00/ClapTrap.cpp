@@ -2,30 +2,13 @@
 
 // getters
 
-// int ClapTrap::getHitpoints() const
-// {
-//     return _hitpoints;
-// }
-
-// int ClapTrap::getEnergyPoints() const
-// {
-//     return this->_energyPoints;
-// }
-
-// int ClapTrap::getAttackDamage() const
-// {
-//     return this->_attackDamage;
-// }
-
-// std::string ClapTrap::getName() const
-// {
-//     return this->_name;
-// }
-
 //constructors and destructors
 
 ClapTrap::ClapTrap(std::string name) : _name(name)
 {
+    this->_hitpoints = 10;
+    this->_energyPoints = 10;
+    this->_attackDamage = 0;
     std::cout << _name << " was created " << std::endl;
 }
 
@@ -79,4 +62,13 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     std::cout << "ClapTrap " << _name << " is repaired for " << amount << " points of health!" << std::endl;
     _energyPoints--;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+    this->_name = other._name;
+    this->_hitpoints = other._hitpoints;
+    this->_energyPoints = other._energyPoints;
+    this->_attackDamage = other._attackDamage;
+    return *this;
 }
