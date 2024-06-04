@@ -1,11 +1,11 @@
-SRCS	=	Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS	=	main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 
-NAME	=	zombie
+NAME	=	ScavTrap
 
-# CXX		=	c++ 
+CXX		=	c++ 
 
-# CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 all: $(NAME)
 
