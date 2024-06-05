@@ -7,14 +7,8 @@
 
 class ScavTrap : public ClapTrap
 {
-    private:
-        std::string _name;
-        int _hitpoints;
-        int _energyPoints;
-        int _attackDamage;
-
-        ScavTrap();
     public:
+        ScavTrap();
         ~ScavTrap();
         ScavTrap(std::string name);
 

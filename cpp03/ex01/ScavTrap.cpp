@@ -9,10 +9,9 @@ ScavTrap::ScavTrap() : ClapTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     this->_name = name;
-    this->_hitpoints = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
-    std::cout << _name << " was created and is ready! - Scav - " << std::endl;
+    std::cout << _name << " was created and is ready! - Scav - " << "Hitpoints: " << _hitpoints<< std::endl;
 }
 
 ScavTrap::~ScavTrap()
