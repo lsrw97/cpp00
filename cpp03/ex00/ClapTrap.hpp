@@ -12,11 +12,9 @@ class ClapTrap
         int _energyPoints;
         int _attackDamage;
 
-    protected:
-        ClapTrap();
-
     public:
         ~ClapTrap();
+        ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap &cpy);
         ClapTrap &operator=(const ClapTrap &other);

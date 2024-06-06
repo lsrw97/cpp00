@@ -16,6 +16,19 @@ Brain::Brain(const Brain &cpy)
     *this = cpy;
 }
 
+void Brain::setIdea(int index, std::string idea)
+{
+    if (index >= 0 && index < 100)
+        ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index) const
+{
+    if (index >= 0 && index < 100)
+        return ideas[index];
+    return "";
+}
+
 Brain &Brain::operator=(const Brain &other)
 {
     std::cout << "Brain assignation operator called" << std::endl;

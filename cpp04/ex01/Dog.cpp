@@ -4,19 +4,39 @@
 Dog::Dog() : Animal()
 {
     this->_type = "Dog";
-    this->_brain = new Brain();
     std::cout << "Dog constructor called" << std::endl;
 }
 
 Dog::~Dog()
 {
-    delete _brain;
     std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &cpy) : Animal(cpy)
 {
     std::cout << "Dog copy constructor called" << std::endl;
+}
+
+void Dog::setIdea(std::string idea)
+{
+    for(int i = 0; i < 100; i++)
+    {
+        if (this->_brain->getIdea(i) == "")
+        {
+            this->_brain->getIdea(i) = idea;
+            break;
+        }
+    }
+    std::cout << "Brain is full of Ideas!" << std::endl;
+}
+
+void Dog::printIdeas() const
+{
+    for (int i = 0; i < 100; i++)
+    {
+        if (this->_brain->getIdea(i) != "")
+            std::cout << this->_brain->getIdea(i) << std::endl;
+    }
 }
 
 Dog &Dog::operator=(const Dog &other)

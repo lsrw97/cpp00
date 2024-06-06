@@ -2,7 +2,6 @@
 
 int main ()
 
-
 {
     ClapTrap a;
     ClapTrap b("B");
