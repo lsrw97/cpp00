@@ -6,7 +6,7 @@
 /*   By: eelisaro <eelisaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 15:25:45 by lschrafs          #+#    #+#             */
-/*   Updated: 2024/06/06 23:54:50 by eelisaro         ###   ########.fr       */
+/*   Updated: 2024/06/07 03:06:43 by eelisaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int main(void) {
   }
   std::cout << std::endl;
 
+
+
   for (int i = 0; i < 10; i++)
     array_animals[i]->makeSound();
 
@@ -44,6 +46,8 @@ int main(void) {
 
   for (int i = 0; i < 10; i++)
     delete array_animals[i];
+
+
 
   std::cout << std::endl << "--- Test for deep copy ---" << std::endl << std::endl;
 
@@ -57,6 +61,8 @@ int main(void) {
 
   Cat *cat3 = new Cat(*cat2);
   cat2->setIdea("Gotta sleep now...");
+  cat2->setIdea("Gotta sleep now..");
+  cat2->setIdea("Gotta sleep now.");
   std::cout << std::endl;
   cat2->printIdeas();
   std::cout << std::endl;

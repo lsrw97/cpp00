@@ -5,11 +5,6 @@ WrongAnimal::WrongAnimal() : _type("WrongAnimal")
     std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string type) : _type(type)
-{
-    std::cout << "WrongAnimal constructor called" << std::endl;
-}
-
 WrongAnimal::WrongAnimal(const WrongAnimal &cpy) : _type(cpy._type)
 {
     std::cout << "WrongAnimal copy constructor called" << std::endl;
@@ -38,4 +33,3 @@ void WrongAnimal::makeSound() const
 {
     std::cout << "Some sound" << std::endl;
 }
-
