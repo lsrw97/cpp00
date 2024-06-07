@@ -9,7 +9,7 @@ ClapTrap::ClapTrap() : _name("default")
     this->_hitpoints = 10;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << _name << " was created " << std::endl;
+    std::cout << "ClapTrap " << _name << " was created " << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name)
@@ -17,16 +17,17 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
     this->_hitpoints = 10;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << _name << " was created " << std::endl;
+    std::cout << "ClapTrap " << _name << " was created " << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << _name << " was destroyed " << std::endl;
+    std::cout << "ClapTrap " << _name << " was destroyed " << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
+    std::cout << "clapTrap copy constructor called " << cpy._name << std::endl;
     this->_name = cpy._name;
     this->_hitpoints = cpy._hitpoints;
     this->_energyPoints = cpy._energyPoints;

@@ -8,15 +8,14 @@ class Brain
 {
     private:
         std::string ideas[100];
-    
+
     public:
         Brain();
         ~Brain();
         Brain(const Brain &cpy);
         Brain &operator=(const Brain &other);
-        std::string getIdea(int index) const;
+        std::string getIdeas(int index) const;
         void setIdea(int index, std::string idea);
-        
 };
 
 #endif

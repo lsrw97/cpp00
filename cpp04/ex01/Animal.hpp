@@ -9,7 +9,6 @@ class Animal
 {
     protected:
         std::string _type;
-        Brain *_brain;
 
     public:
         Animal();

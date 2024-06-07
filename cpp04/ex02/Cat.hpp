@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include "Brain.hpp"
 
 #include "Animal.hpp"
 
@@ -11,13 +10,16 @@ class Cat : public Animal
 {
     private:
         Brain *_brain;
+
     public:
         Cat();
         ~Cat();
         Cat(const Cat &cpy);
         Cat &operator=(const Cat &other);
+        void setIdea(std::string idea);
+        void printIdeas() const;
 
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

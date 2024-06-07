@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: eelisaro <eelisaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 15:25:45 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/10/04 09:59:39 by lschrafs         ###   ########.fr       */
+/*   Updated: 2024/06/06 23:54:50 by eelisaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@
 #include "Dog.hpp"
 
 int main(void) {
-	std::cout << std::endl << "--- PDF: ---" << std::endl
-            << std::endl;
+
+  std::cout << "show constructor and destructor" << std::endl;
+
   Dog *dog = new Dog();
   Cat *cat = new Cat();
 
   delete dog;
   delete cat;
 
-  std::cout << std::endl << "--- Array of animals ---" << std::endl
-            << std::endl;
+  std::cout << std::endl << " Array of animals, call and delete them " << std::endl << std::endl;
 
   Animal *array_animals[10];
+
   for (int i = 0; i < 10; i++) {
     if (i % 2)
       array_animals[i] = new Dog();
@@ -36,14 +37,16 @@ int main(void) {
   }
   std::cout << std::endl;
 
-  for (int i = 0; i < 10; i++) array_animals[i]->makeSound();
+  for (int i = 0; i < 10; i++)
+    array_animals[i]->makeSound();
 
   std::cout << std::endl;
 
-  for (int i = 0; i < 10; i++) delete array_animals[i];
+  for (int i = 0; i < 10; i++)
+    delete array_animals[i];
 
-  std::cout << std::endl << "--- Test for deep copy ---" << std::endl
-            << std::endl;
+  std::cout << std::endl << "--- Test for deep copy ---" << std::endl << std::endl;
+
   Cat *cat2 = new Cat();
   cat2->setIdea("Hmm... fish!");
   cat2->setIdea("I wanna play...");

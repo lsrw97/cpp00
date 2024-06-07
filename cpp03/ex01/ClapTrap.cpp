@@ -9,7 +9,7 @@ ClapTrap::ClapTrap() : _name("default")
     this->_hitpoints = 100;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << _name << " was created " << std::endl;
+    std::cout << _name << " was created - claptrap" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -18,16 +18,17 @@ ClapTrap::ClapTrap(std::string name)
     this->_hitpoints = 100;
     this->_energyPoints = 10;
     this->_attackDamage = 0;
-    std::cout << _name << " was created " << std::endl;
+    std::cout << "ClapTrap " << _name << " was created - claptrap" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << _name << " was destroyed " << std::endl;
+    std::cout << "ClapTrap " << _name << " was destroyed - claptrap" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
+    std::cout << "clapTrap copy constructor called " << cpy._name << std::endl;
     this->_name = cpy._name;
     this->_hitpoints = cpy._hitpoints;
     this->_energyPoints = cpy._energyPoints;
@@ -60,16 +61,16 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (_hitpoints == 10)
+    if (_hitpoints == 100)
     {
         std::cout << "ClapTrap " << _name << " is already at full health" <<  " -- Hitpoints: " << _hitpoints << std::endl;
         return;
     }
     _hitpoints += amount;
-    if (_hitpoints > 10)
+    if (_hitpoints > 100)
     {
-        amount = 10 - _hitpoints;
-        _hitpoints = 10;
+        amount = 100 - _hitpoints;
+        _hitpoints = 100;
     }
     std::cout << "ClapTrap " << _name << " is repaired for " << amount << " points of health!" << " -- Hitpoints: " << _hitpoints << std::endl;
     _energyPoints--;
